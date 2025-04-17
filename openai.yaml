@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: LLD Research API
+  version: 1.0.0
+paths:
+  /run/:
+    post:
+      operationId: runExperiment
+      description: Run a language diffusion experiment with LLaDA or Dream 7B.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  example: "The cat sat on the mat"
+                model:
+                  type: string
+                  enum: [dream7b, llada]
+                steps:
+                  type: integer
+                  example: 10
+      responses:
+        '200':
+          description: Experiment result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  prompt:
+                    type: string
+                  tokens:
+                    type: array
+                    items:
+                      type: string
+                  entropy:
+                    type: array
+                    items:
+                      type: number
+
