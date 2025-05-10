@@ -1,0 +1,19 @@
+{
+  "prompt": "The cat sat on the mat",
+  "model": "dream7b",
+  "steps": 5,
+  "tokens": [
+    "<The cat sat on the mat_0>",
+    "<The cat sat on the mat_1>",
+    "<The cat sat on the mat_2>",
+    "<The cat sat on the mat_3>",
+    "<The cat sat on the mat_4>"
+  ],
+  "entropy": [
+    1.0,
+    0.8,
+    0.6,
+    0.4,
+    0.19999999999999996
+  ]
+}
